@@ -58,7 +58,9 @@ function addNewData() {
 
 function delOldData() {
   var myTable = document.getElementById("csie");
+  if(myTable.length.rows > 1) {
   myTable.deleteRow(-1);
+  }
 }
 </script>
 
