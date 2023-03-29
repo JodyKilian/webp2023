@@ -1,0 +1,33 @@
+<html>
+<h1>Computer Science Class</h1>
+<table id = "csie" class = "table table-striped table-hover">
+  <tr>
+    <th>Major</th>
+    <th>Class</th>
+    <th>Teacher</th>
+  </tr>
+</table>
+
+<button onclick = "addNewData">Add New Data</button>
+<button onclick = "delOldData">Del Old Data</button>
+</html>
+
+<script>
+var d = ["Computer Science", "Computer Science", "Computer Science", "Computer Science", "Computer Science", "Computer Science"];
+var c = ["Anjing", "Ngentot", "Memek", "Kontol", "Tai", "Gaguna"];
+var t = ["Budi", "Adi", "Reza", "Tono", "Ahmad", "Jepri"];
+
+function addNewData() {
+  var myTable = document.getElementById("csie");
+  var rowCount = c.length;
+  var cellCount = myTable.rows[0].cells.length;
+  for(var i = 0; i < rowCount; i++) {
+    var row = myTable.insertRow(-1);
+    row.insertCell(0).innerHTML = d[i];
+    row.insertCell(1).innerHTML = c[i];
+    row.insertCell(2).innerHTML = t[i];
+    console.log(d[i], c[i], t[i]);
+  }
+}
+</script>
+
