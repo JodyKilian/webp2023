@@ -12,6 +12,32 @@
 <button onclick = "delOldData">Del Old Data</button>
 </html>
 
+<css>
+  table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+td,
+th {
+  border: 1px solid #ddd;
+  padding: 6px;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+tr:hover {
+  background-color: #ddd;
+}
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04aa6d;
+  color: white;
+}
+</css>
+
 <script>
 var d = ["Computer Science", "Computer Science", "Computer Science", "Computer Science", "Computer Science", "Computer Science"];
 var c = ["Anjing", "Ngentot", "Memek", "Kontol", "Tai", "Gaguna"];
@@ -28,6 +54,11 @@ function addNewData() {
     row.insertCell(2).innerHTML = t[i];
     console.log(d[i], c[i], t[i]);
   }
+}
+
+function delOldData() {
+  var myTable = document.getElementById("csie");
+  myTable.deleteRow(-1);
 }
 </script>
 
